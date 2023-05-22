@@ -1,0 +1,24 @@
+﻿@model List<Laptop>;
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Shop Laptops";
+}
+<img src="https://images.moneycontrol.com/static-mcnews/2022/10/Nitro5-AN515-57-Hero-Banner-1.jpg?impolicy=website&width=1600&height=900" style="width: 1200px; height: 500px"/>
+<div class="row">
+@foreach (var m in Model)
+{
+    <div class="col-sm-4 mb-3 mb-sm-0 my-4">
+        <div class="card shadow-lg mx-5" style="width: 20rem;">
+            <img src="@m.laptopImage class="card-img-top" style="height:300px">
+            <div class="card-body">
+                <h5 class="card-title text-center">@m.laptopName</h5>
+                <p class="card-text text-center">@m.laptopDesc</p>
+                <a href="#" class="btn btn-primary col-12">@m.laptopPrice</a>
+            </div>
+        </div>
+    </div>
+}
+</div>

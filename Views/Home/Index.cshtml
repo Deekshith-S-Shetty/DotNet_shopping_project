@@ -1,0 +1,24 @@
+﻿@model List<Mobile>;
+
+@{
+    ViewData["Title"] = "Shop Mobiles";
+}
+
+<img src="https://png.pngtree.com/background/20210710/original/pngtree-cool-new-mobile-phone-promotion-purple-banner-picture-image_1006678.jpg" />
+
+<div class="row">
+    @foreach(var m in Model)
+    {
+        <div class="col-sm-4 mb-3 mb-sm-0 my-4 ">
+        <div class="card shadow-lg mx-5" style="width: 20rem;">
+            <img src="@m.mobileImage" class="card-img-top" style="height:300px">
+            <div class="card-body">
+                    <h5 class="card-title text-center">@m.mobileName</h5>
+                    <p class="card-text text-center">@m.mobileDesc</p>
+                    <a href="#" class="btn btn-primary col-12">@m.mobilePrice</a>
+            </div>
+        </div>
+    </div> 
+    }
+</div>
+
